@@ -1,3 +1,5 @@
+#include "Import.h"
+
 typedef struct{
     int x, y;
     int points;
@@ -20,3 +22,7 @@ typedef struct {
     int x, y;
     int damage;
 }BULLET;
+
+typedef struct Colors{
+    ALLEGRO_COLOR RED, GREEN, BLUE, YELLOW, PURPLE, BLACK;
+}COLORS, *PCOLORS;

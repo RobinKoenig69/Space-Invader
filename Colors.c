@@ -1,18 +1,13 @@
-#include "Import.h"
+#include "SPACESHIP.h"
 
-    ALLEGRO_COLOR Green;
-    ALLEGRO_COLOR Red;
-    ALLEGRO_COLOR Blue;
-    ALLEGRO_COLOR Purple;
-    ALLEGRO_COLOR Yellow;
-    ALLEGRO_COLOR Black;
+PCOLORS MapColor(){
+    PCOLORS COLOR_SPACESHIPS = malloc(sizeof (COLORS));
+    COLOR_SPACESHIPS->BLUE = al_map_rgb(51,38,223);
+    COLOR_SPACESHIPS->GREEN = al_map_rgb(40,255,97);
+    COLOR_SPACESHIPS->RED = al_map_rgb(245,23,15);
+    COLOR_SPACESHIPS->YELLOW = al_map_rgb(245,237,15);
+    COLOR_SPACESHIPS-> PURPLE = al_map_rgb(137,15,245);
+    COLOR_SPACESHIPS-> BLACK = al_map_rgb(0,0,0);
 
-ALLEGRO_COLOR Color[6] ={
-        Green = al_map_rgb(48,216,98),
-        Red = al_map_rgb(219,18,18),
-        Blue = al_map_rgb(18,139,219),
-        Purple = al_map_rgb(186,18,219),
-        Yellow = al_map_rgb(233,247,26),
-        Black = al_map_rgb(0,0,0)
-};
-
+    return COLOR_SPACESHIPS;
+}
