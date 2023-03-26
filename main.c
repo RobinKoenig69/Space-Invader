@@ -1,11 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_primitives.h>
-#include <allegro5/allegro_image.h>
+#include "Colors.c"
 
-bool end = false;
+
 
 int main() {
     ALLEGRO_DISPLAY* display = NULL;
@@ -13,19 +8,24 @@ int main() {
     ALLEGRO_TIMER *timer = NULL;
     ALLEGRO_EVENT event;
 
+    InitColor();
+
+    ALLEGRO_BITMAP * SPACESHIP = NULL;
+    ALLEGRO_BITMAP * EVIL_SPACESHIP = NULL;
+
     assert(al_init());
-    assert(al_init_image_addon());
     assert(al_init_primitives_addon());
     assert(al_install_keyboard());
+    assert(al_init_image_addon());
 
-    al_load_bitmap("FILES/EVIL_SPACESHIP.png");
-    al_load_bitmap("FILES/SPACESHIP.png");
+    //EVIL_SPACESHIP = al_load_bitmap("FILES\\EVIL_SPACESHIP.png");
+    SPACESHIP = al_load_bitmap("..\\FILES\\SPACESHIP.png");
 
-    display = al_create_display(1920, 1080);
-    al_set_new_display_flags(ALLEGRO_FULLSCREEN_WINDOW);
+    display = al_create_display(500, 500);
+    //al_set_new_display_flags(ALLEGRO_FULLSCREEN_WINDOW);
     al_set_window_title(display, "Space Invader V1 - Robin KOENIG");
 
-    timer = al_create_timer(1.0/60.0);
+    timer = al_create_timer(1.0/24);
     al_start_timer(timer);
 
     queue = al_create_event_queue();
@@ -33,7 +33,7 @@ int main() {
     al_register_event_source(queue, al_get_display_event_source(display));
     al_register_event_source(queue, al_get_timer_event_source(timer));
 
-    while (!end){
 
-    }
+    al_draw_tinted_bitmap(SPACESHIP,green, 0,0,0);
+    al_flip_display();
 }
