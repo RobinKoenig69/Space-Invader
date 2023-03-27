@@ -1,8 +1,6 @@
-#include "Colors.c"
-int x;
-int main() {
+#include "Menu.c"
 
-    bool end = false;
+int main() {
 
     ALLEGRO_DISPLAY* display = NULL;
     ALLEGRO_EVENT_QUEUE* queue = NULL;
@@ -36,8 +34,9 @@ int main() {
     al_register_event_source(queue, al_get_display_event_source(display));
     al_register_event_source(queue, al_get_timer_event_source(timer));
 
+    while (!end){
+        while(Menu) {
 
-    al_draw_tinted_bitmap(SPACESHIP, , 0,0,0);
-    al_flip_display();
-    al_rest(20);
+        }
+    }
 }
