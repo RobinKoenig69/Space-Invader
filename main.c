@@ -1,5 +1,5 @@
 #include "Colors.c"
-
+int x;
 int main() {
 
     bool end = false;
@@ -12,9 +12,10 @@ int main() {
     ALLEGRO_BITMAP * SPACESHIP = NULL;
     ALLEGRO_BITMAP * EVIL_SPACESHIP = NULL;
 
-    MapColor();
+    PCOLORS pCOLOR_SPACESHIP = malloc(sizeof (PCOLORS));
+    MapColor(pCOLOR_SPACESHIP);
+    pCOLOR_SPACESHIP->BLACK;
 
-    COLOR_SPACESHIPS
     assert(al_init());
     assert(al_init_primitives_addon());
     assert(al_install_keyboard());
@@ -36,7 +37,7 @@ int main() {
     al_register_event_source(queue, al_get_timer_event_source(timer));
 
 
-    al_draw_tinted_bitmap(SPACESHIP,, 0,0,0);
+    al_draw_tinted_bitmap(SPACESHIP, , 0,0,0);
     al_flip_display();
     al_rest(20);
 }
