@@ -1,4 +1,4 @@
-#include "Menu.c"
+#include "Game.c"
 
 int main() {
 
