@@ -58,6 +58,10 @@ typedef struct {
 //prototypes
 
 PCOLORS MapColor();
+void Init_Allegro();
+void Init_Allegro_Display(ALLEGRO_DISPLAY *pdisplay, int X, int Y, char* pTitle);
+void Init_Allegro_Event(ALLEGRO_EVENT_QUEUE* pqueue, ALLEGRO_DISPLAY *pdisplay, ALLEGRO_TIMER*ptimer);
+
 
 
 #endif SPACESHIP_H
