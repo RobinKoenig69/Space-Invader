@@ -10,9 +10,11 @@ int main() {
     ALLEGRO_BITMAP * SPACESHIP = NULL;
     ALLEGRO_BITMAP * EVIL_SPACESHIP = NULL;
 
-    PCOLORS pCOLOR_SPACESHIP = malloc(sizeof (PCOLORS));
-    MapColor(pCOLOR_SPACESHIP);
-    pCOLOR_SPACESHIP->BLACK;
+
+    //MapColor(pCOLOR_SPACESHIP);
+    // pCOLOR_SPACESHIP->BLACK;
+
+    PCOLORS Colors_Spaceship = MapColor();
 
     assert(al_init());
     assert(al_init_primitives_addon());
@@ -33,6 +35,8 @@ int main() {
     al_register_event_source(queue, al_get_keyboard_event_source());
     al_register_event_source(queue, al_get_display_event_source(display));
     al_register_event_source(queue, al_get_timer_event_source(timer));
+
+
 
     while (!end){
         while(Menu) {
