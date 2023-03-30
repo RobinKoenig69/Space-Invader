@@ -19,15 +19,23 @@ int main() {
 
     Init_Allegro_Display(display, 500, 500, "Space Invader");
 
-    timer = al_create_timer(1.0/24);
+
     al_start_timer(timer);
 
     Init_Allegro_Event(queue,display,timer);
 
-
+    Set_Display_Refresh_Rate(timer, 24);
 
     while (!end){
         while(Menu) {
+
+        }
+
+        while (Game){
+
+        }
+
+        while (Credits){
 
         }
     }

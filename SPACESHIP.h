@@ -38,6 +38,7 @@ typedef struct {
 
 bool end = false;
 bool Menu = true;
+bool Game = false;
 bool Credits = false;
 bool Boss = false;
 
@@ -61,7 +62,7 @@ PCOLORS MapColor();
 void Init_Allegro();
 void Init_Allegro_Display(ALLEGRO_DISPLAY *pdisplay, int X, int Y, char* pTitle);
 void Init_Allegro_Event(ALLEGRO_EVENT_QUEUE* pqueue, ALLEGRO_DISPLAY *pdisplay, ALLEGRO_TIMER*ptimer);
-
+void Set_Display_Refresh_Rate(ALLEGRO_TIMER *pTimer, int RefreshRate);
 
 
 #endif SPACESHIP_H

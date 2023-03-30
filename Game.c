@@ -31,3 +31,8 @@ void Init_Allegro_Event(ALLEGRO_EVENT_QUEUE* pqueue, ALLEGRO_DISPLAY *pdisplay, 
     al_register_event_source(pqueue, al_get_display_event_source(pdisplay));
     al_register_event_source(pqueue, al_get_timer_event_source(ptimer));
 }
+
+void Set_Display_Refresh_Rate(ALLEGRO_TIMER *pTimer, int RefreshRate){
+    pTimer = al_create_timer(1.0/RefreshRate);
+    al_start_timer(pTimer);
+}
