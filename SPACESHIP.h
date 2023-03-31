@@ -18,12 +18,6 @@ typedef struct{
 typedef struct {
     int x, y;
     int damage;
-    int HP;
-}BOSS;
-
-typedef struct {
-    int x, y;
-    int damage;
 }BULLET;
 
 typedef struct {
@@ -56,13 +50,19 @@ typedef struct {
             *BULLETS_TYPE_5;
 }TEXTURES;
 
+typedef struct {
+    int x, y;
+    bool clicked;
+    bool released;
+}Mouse;
+
 //prototypes
 
 PCOLORS MapColor();
 void Init_Allegro();
-void Init_Allegro_Display(ALLEGRO_DISPLAY *pdisplay, int X, int Y, char* pTitle);
-void Init_Allegro_Event(ALLEGRO_EVENT_QUEUE* pqueue, ALLEGRO_DISPLAY *pdisplay, ALLEGRO_TIMER*ptimer);
-void Set_Display_Refresh_Rate(ALLEGRO_TIMER *pTimer, int RefreshRate);
+void Init_Allegro_Display(ALLEGRO_DISPLAY **pdisplay, int X, int Y, char* pTitle);
+void Init_Allegro_Event(ALLEGRO_EVENT_QUEUE **pqueue, ALLEGRO_DISPLAY **pdisplay, ALLEGRO_TIMER **ptimer);
+void Set_Display_Refresh_Rate(ALLEGRO_TIMER **pTimer, int RefreshRate);
 
 
 #endif SPACESHIP_H
