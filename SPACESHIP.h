@@ -50,12 +50,6 @@ typedef struct {
             *BULLETS_TYPE_5;
 }TEXTURES;
 
-typedef struct {
-    int x, y;
-    bool clicked;
-    bool released;
-}Mouse;
-
 //prototypes
 
 PCOLORS MapColor();

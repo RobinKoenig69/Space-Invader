@@ -16,8 +16,7 @@ int main() {
 
     PCOLORS Colors_Spaceship = MapColor();
 
-    Mouse* Cursor = NULL;
-
+    ALLEGRO_MOUSE_STATE *Cursor_State = NULL;
 
     Init_Allegro();
     printf("erreur 1");
@@ -42,7 +41,7 @@ int main() {
 
             al_wait_for_event(queue, &event);
 
-            if (event.mouse = )
+            //if (event.mouse = )
 
 
             al_flip_display();

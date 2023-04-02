@@ -38,3 +38,4 @@ void Set_Display_Refresh_Rate(ALLEGRO_TIMER** pTimer, int RefreshRate){
     *pTimer = al_create_timer(1.0/RefreshRate);
     al_start_timer(*pTimer);
 }
+
